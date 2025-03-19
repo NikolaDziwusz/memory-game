@@ -1,0 +1,65 @@
+.game-board {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Easy: 6 pairs (12 cards) */
+.game-board[data-difficulty="easy"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (min-width: 576px) {
+  .game-board[data-difficulty="easy"] {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .game-board[data-difficulty="easy"] {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Medium: 9 pairs (18 cards) */
+.game-board[data-difficulty="medium"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (min-width: 576px) {
+  .game-board[data-difficulty="medium"] {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .game-board[data-difficulty="medium"] {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Hard: 12 pairs (24 cards) */
+.game-board[data-difficulty="hard"] {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (min-width: 576px) {
+  .game-board[data-difficulty="hard"] {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .game-board[data-difficulty="hard"] {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .game-board[data-difficulty="hard"] {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+

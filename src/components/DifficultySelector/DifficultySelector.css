@@ -1,0 +1,50 @@
+.difficulty-selector {
+  width: 100%;
+}
+
+.difficulty-selector__options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .difficulty-selector__options {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.difficulty-selector__option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.difficulty-selector__option input {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.difficulty-selector__label {
+  font-size: 1rem;
+}
+
+.difficulty-selector__button {
+  display: block;
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color var(--transition-speed);
+}
+
+.difficulty-selector__button:hover {
+  background-color: var(--color-primary-dark);
+}
+

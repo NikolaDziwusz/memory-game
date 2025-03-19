@@ -1,0 +1,63 @@
+.game-history {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.game-history__title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.game-history__list {
+  display: grid;
+  gap: 1rem;
+  border: #4a6fa5 1px solid;
+  border-radius: 3px;
+  height: 20vh;
+  contain: content;
+  overflow-y: scroll;}
+
+@media (min-width: 15vw) {
+  .game-history__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.game-history__item {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.game-history__detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-history__label {
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+
+.game-history__value {
+  color: var(--color-text);
+}
+
+.game-history__empty-message {
+  text-align: center;
+  color: var(--color-text-light);
+  font-style: italic;
+  padding: 1rem;
+}
+
+.game-history--empty {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+

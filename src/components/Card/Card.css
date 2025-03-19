@@ -1,0 +1,106 @@
+.card {
+  aspect-ratio: 3 / 4;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform var(--transition-speed);
+  transform-style: preserve-3d;
+}
+
+.card[data-flipped="true"] .card__inner {
+  transform: rotateY(180deg);
+}
+
+.card__front,
+.card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.card__front {
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary-dark));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__front::after {
+  content: "?";
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-white);
+}
+
+.card__back {
+  background-color: var(--color-white);
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Generate background images for each card */
+.card__image[data-image-id="0"] {
+  background-image: url("/placeholder.svg?height=100&width=100");
+}
+.card__image[data-image-id="1"] {
+  background-image: url("/placeholder.svg?height=100&width=100");
+}
+.card__image[data-image-id="2"] {
+  background-image: url("/placeholder.svg?height=100&width=100");
+}
+.card__image[data-image-id="3"] {
+  background-image: url("/placeholder.svg?height=100&width=100");
+}
+.card__image[data-image-id="4"] {
+  background-image: url("/placeholder.svg?height=100&width=100");
+}
+.card__image[data-image-id="5"] {
+  background-image: url("/placeholder.svg?height=100&width=100");
+}
+.card__image[data-image-id="6"] {
+  background-image: url("/placeholder.svg?height=100&width=100");
+}
+.card__image[data-image-id="7"] {
+  background-image: url("/placeholder.svg?height=100&width=100");
+}
+.card__image[data-image-id="8"] {
+  background-image: url("/placeholder.svg?height=100&width=100");
+}
+.card__image[data-image-id="9"] {
+  background-image: url("/placeholder.svg?height=100&width=100");
+}
+.card__image[data-image-id="10"] {
+  background-image: url("/placeholder.svg?height=100&width=100");
+}
+.card__image[data-image-id="11"] {
+  background-image: url("/placeholder.svg?height=100&width=100");
+}
+
+.card[data-matched="true"] {
+  cursor: default;
+}
+
+.card[data-matched="true"] .card__back {
+  background-color: rgba(76, 175, 80, 0.2);
+  border: 2px solid var(--color-success);
+}
+

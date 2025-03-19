@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*@import "./styles/variables.css";*/
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+@layer components {
+  .card-item {
+    @apply transition-all duration-300;
+  }
+
+  .card-item-matched {
+    @apply opacity-70;
+  }
+
+  .card-item-selected {
+    @apply ring-2 ring-yellow-400;
+  }
+}
+
